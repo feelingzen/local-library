@@ -55,13 +55,7 @@ mongoose.set("strictQuery", false);
 
 const dev_db_url = 
   "mongodb+srv://admin:3nvyb04rd@cluster0.h0ex4ve.mongodb.net/local_library?retryWrites=true&w=majority";
-const mongoDB = process.env.MONGODB_URI || dev_db_url;
-
-main().catch((err) => console.log(err));
-async function main() {
-  await mongoose.connect(mongoDB);
-}
-
+const mongoDB = dev_db_url;
 
 main().catch((err) => console.log(err));
 async function main() {
